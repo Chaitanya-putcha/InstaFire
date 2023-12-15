@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#FBFBFB"
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
@@ -20,8 +21,8 @@
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="180dp"
         android:ems="10"
         android:hint="Email"
         android:inputType="text" />
@@ -29,7 +30,7 @@
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginTop="3dp"
         android:ems="10"
         android:hint="Password"
@@ -42,5 +43,14 @@
         android:layout_marginLeft="150dp"
         android:layout_marginTop="16dp"
         android:text="Login" />
+
+    <Button
+        android:id="@+id/btnRegister1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:background="#FFFFFF"
+        android:text="Register"
+        android:textSize="34sp" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -22,6 +22,13 @@ class LoginActivity : AppCompatActivity() {
         val MyButton: Button = findViewById(R.id.button)
         val etEmail: EditText = findViewById(R.id.etEmail)
         val etPassword: EditText = findViewById(R.id.etPassword)
+        val btnRegister = findViewById<Button>(R.id.btnRegister1)
+
+        btnRegister.setOnClickListener {
+            val intent = Intent(this,RegisterActivity::class.java)
+            startActivity(intent)
+        }
+
         var auth = FirebaseAuth.getInstance()
         if(auth.currentUser != null){
             goPostActivity()
@@ -48,7 +55,7 @@ class LoginActivity : AppCompatActivity() {
     }
     }
 
-    private fun goPostActivity() {
+    fun goPostActivity() {
         Log.i(TAG,"goPostActivity")
         val intent = Intent(this,PostsActivity::class.java)
         startActivity(intent)
