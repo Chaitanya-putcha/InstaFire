@@ -30,12 +30,14 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please Enter all details to sign up", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+            btnCreate.isEnabled = false
             auth = FirebaseAuth.getInstance()
             val email = tvEmail.text.toString()
             val password = tvPassword.text.toString()
             val username = tvUsername.text.toString()
             val Age = tvAge.text.toString().toInt()
             auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener { task ->
+                btnCreate.isEnabled = true
                 if(task.isSuccessful){
                     Log.i(TAG,"Successfully created account")
 
